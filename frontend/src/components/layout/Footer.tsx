@@ -1,6 +1,7 @@
 
 import { Link } from 'react-scroll';
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaHeart } from 'react-icons/fa';
+import logo from '../../assets/logo.png';
 
 const Footer = () => {
     const quickLinks = [
@@ -18,7 +19,10 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4">
                 <div className="grid md:grid-cols-4 gap-12 mb-16">
                     <div className="col-span-1 md:col-span-1">
-                        <h3 className="text-2xl font-bold mb-6 text-white">Baal Sanjeevani</h3>
+                        <div className="flex items-center gap-2 mb-6">
+                            <img src={logo} alt="Baal Sanjeevani Logo" className="h-10 w-auto" />
+                            <h3 className="text-2xl font-bold text-white">Baal Sanjeevani</h3>
+                        </div>
                         <p className="text-gray-400 mb-6 leading-relaxed">
                             Nurturing hope, building futures, and empowering every child to reach their full potential through education, healthcare, and love.
                         </p>

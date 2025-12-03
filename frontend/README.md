@@ -34,7 +34,7 @@ Follow these steps to set up the project locally.
 
 1.  **Clone the repository** (if applicable) or navigate to the project directory:
     ```bash
-    cd frontend_new
+    cd frontend
     ```
 
 2.  **Install dependencies**:
@@ -61,7 +61,7 @@ The output will be in the `dist` directory.
 ## 📁 Project Structure
 
 ```
-frontend_new/
+frontend/
 ├── public/              # Static assets
 ├── src/
 │   ├── assets/          # Images and other assets

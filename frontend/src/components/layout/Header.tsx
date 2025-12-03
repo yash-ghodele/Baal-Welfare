@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Link } from 'react-scroll';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../../assets/logo.png';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,9 +27,7 @@ const Header = () => {
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center cursor-pointer">
                         <Link to="home" smooth={true} duration={500} offset={-80} className="flex items-center gap-2">
-                            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-lg">
-                                B
-                            </div>
+                            <img src={logo} alt="Baal Sanjeevani Logo" className="h-12 w-auto object-contain" />
                             <span className="font-bold text-2xl text-gray-800 tracking-tight">
                                 Baal<span className="text-blue-600">Sanjeevani</span>
                             </span>
