@@ -39,14 +39,14 @@ const ContactSection = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12">
-                    <div className="space-y-6">
-                        <div className="flex items-start space-x-4">
-                            <div className="bg-blue-100 text-blue-600 p-3 rounded-lg">
+                    <div className="space-y-8">
+                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-start space-x-4 border border-blue-50">
+                            <div className="bg-blue-100 text-blue-600 p-4 rounded-full flex-shrink-0">
                                 <FaMapMarkerAlt className="text-2xl" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">Address</h3>
-                                <p className="text-gray-600">
+                                <h3 className="text-xl font-bold text-gray-800 mb-2">Visit Us</h3>
+                                <p className="text-gray-600 leading-relaxed">
                                     123 Child Welfare Street<br />
                                     Mumbai, Maharashtra 400001<br />
                                     India
@@ -54,31 +54,31 @@ const ContactSection = () => {
                             </div>
                         </div>
 
-                        <div className="flex items-start space-x-4">
-                            <div className="bg-blue-100 text-blue-600 p-3 rounded-lg">
+                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-start space-x-4 border border-blue-50">
+                            <div className="bg-blue-100 text-blue-600 p-4 rounded-full flex-shrink-0">
                                 <FaEnvelope className="text-2xl" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">Email</h3>
+                                <h3 className="text-xl font-bold text-gray-800 mb-2">Email Us</h3>
                                 <p className="text-gray-600">info@baalsanjeevani.org</p>
                                 <p className="text-gray-600">support@baalsanjeevani.org</p>
                             </div>
                         </div>
 
-                        <div className="flex items-start space-x-4">
-                            <div className="bg-blue-100 text-blue-600 p-3 rounded-lg">
+                        <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 flex items-start space-x-4 border border-blue-50">
+                            <div className="bg-blue-100 text-blue-600 p-4 rounded-full flex-shrink-0">
                                 <FaPhone className="text-2xl" />
                             </div>
                             <div>
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">Phone</h3>
+                                <h3 className="text-xl font-bold text-gray-800 mb-2">Call Us</h3>
                                 <p className="text-gray-600">+91 22 1234 5678</p>
                                 <p className="text-gray-600">+91 98765 43210</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="bg-gray-50 p-8 rounded-xl shadow-lg">
-                        <h3 className="text-2xl font-semibold text-gray-800 mb-6">Send us a Message</h3>
+                    <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                        <h3 className="text-2xl font-bold text-gray-800 mb-6">Send us a Message</h3>
                         <form onSubmit={handleSubmit} className="space-y-4">
                             <div>
                                 <label className="block text-gray-700 font-medium mb-2">Name *</label>

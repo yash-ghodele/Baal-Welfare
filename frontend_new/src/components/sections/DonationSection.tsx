@@ -14,7 +14,7 @@ const DonationSection = () => {
 
     return (
         <section id="donate" className="relative py-20 bg-white">
-            <div className="absolute inset-0 z-0 opacity-25">
+            <div className="absolute inset-0 z-0 opacity-30">
                 <img
                     src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=2000&auto=format&fit=crop"
                     alt="Donation Background"
@@ -95,9 +95,15 @@ const DonationSection = () => {
 
                             <input
                                 type="number"
+                                min="1"
                                 placeholder="Custom Amount"
                                 value={customAmount}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setCustomAmount(e.target.value)}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+                                    const val = e.target.value;
+                                    if (val === '' || (Number(val) > 0 && !val.includes('-'))) {
+                                        setCustomAmount(val);
+                                    }
+                                }}
                                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                             />
                         </div>

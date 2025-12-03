@@ -1,4 +1,5 @@
 
+import { FaQuoteLeft } from 'react-icons/fa';
 import { testimonials } from '../../data/mockData';
 
 const TestimonialsSection = () => {
@@ -17,19 +18,23 @@ const TestimonialsSection = () => {
                     {testimonials.map((testimonial) => (
                         <div
                             key={testimonial.id}
-                            className="bg-gradient-to-br from-blue-50 to-green-50 p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300"
+                            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 relative overflow-hidden"
                         >
-                            <div className="text-blue-600 text-4xl mb-4">"</div>
-                            <p className="text-gray-700 italic mb-6">{testimonial.quote}</p>
-                            <div className="flex items-center border-t border-gray-300 pt-4">
-                                <img
-                                    src={testimonial.image}
-                                    alt={testimonial.name}
-                                    className="w-12 h-12 rounded-full object-cover mr-4"
-                                />
-                                <div>
-                                    <p className="font-semibold text-gray-800">{testimonial.name}</p>
-                                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                            <div className="absolute top-4 right-4 text-blue-100 text-6xl opacity-50">
+                                <FaQuoteLeft />
+                            </div>
+                            <div className="relative z-10">
+                                <p className="text-gray-600 italic mb-6 text-lg leading-relaxed">"{testimonial.quote}"</p>
+                                <div className="flex items-center pt-4">
+                                    <img
+                                        src={testimonial.image}
+                                        alt={testimonial.name}
+                                        className="w-14 h-14 rounded-full object-cover mr-4 border-2 border-blue-100"
+                                    />
+                                    <div>
+                                        <p className="font-bold text-gray-800 text-lg">{testimonial.name}</p>
+                                        <p className="text-sm text-blue-600 font-medium">{testimonial.role}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

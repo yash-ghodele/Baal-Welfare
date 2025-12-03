@@ -14,33 +14,33 @@ const Footer = () => {
     ];
 
     return (
-        <footer className="bg-gray-800 text-white py-12">
+        <footer className="bg-gray-900 text-white pt-20 pb-10">
             <div className="max-w-7xl mx-auto px-4">
-                <div className="grid md:grid-cols-3 gap-8 mb-8">
-                    <div>
-                        <h3 className="text-2xl font-semibold mb-4">Baal Sanjeevani Child Welfare</h3>
-                        <p className="text-gray-300 mb-4">
-                            Nurturing hope, building futures, and empowering every child to reach their full potential.
+                <div className="grid md:grid-cols-4 gap-12 mb-16">
+                    <div className="col-span-1 md:col-span-1">
+                        <h3 className="text-2xl font-bold mb-6 text-white">Baal Sanjeevani</h3>
+                        <p className="text-gray-400 mb-6 leading-relaxed">
+                            Nurturing hope, building futures, and empowering every child to reach their full potential through education, healthcare, and love.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="text-gray-300 hover:text-blue-400 transition">
-                                <FaFacebook className="text-2xl" />
+                            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-600 hover:text-white transition-all duration-300">
+                                <FaFacebook className="text-lg" />
                             </a>
-                            <a href="#" className="text-gray-300 hover:text-pink-400 transition">
-                                <FaInstagram className="text-2xl" />
+                            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-pink-600 hover:text-white transition-all duration-300">
+                                <FaInstagram className="text-lg" />
                             </a>
-                            <a href="#" className="text-gray-300 hover:text-blue-500 transition">
-                                <FaLinkedin className="text-2xl" />
+                            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-700 hover:text-white transition-all duration-300">
+                                <FaLinkedin className="text-lg" />
                             </a>
-                            <a href="#" className="text-gray-300 hover:text-blue-300 transition">
-                                <FaTwitter className="text-2xl" />
+                            <a href="#" className="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:bg-blue-400 hover:text-white transition-all duration-300">
+                                <FaTwitter className="text-lg" />
                             </a>
                         </div>
                     </div>
 
                     <div>
-                        <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
-                        <ul className="space-y-2">
+                        <h4 className="text-lg font-semibold mb-6 text-white">Quick Links</h4>
+                        <ul className="space-y-3">
                             {quickLinks.map((link) => (
                                 <li key={link.to}>
                                     <Link
@@ -48,9 +48,9 @@ const Footer = () => {
                                         smooth={true}
                                         duration={500}
                                         offset={-80}
-                                        className="text-gray-300 hover:text-blue-400 transition cursor-pointer"
+                                        className="text-gray-400 hover:text-blue-400 transition cursor-pointer flex items-center"
                                     >
-                                        {link.name}
+                                        <span className="mr-2">›</span> {link.name}
                                     </Link>
                                 </li>
                             ))}
@@ -58,20 +58,45 @@ const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="text-xl font-semibold mb-4">Contact Info</h4>
-                        <ul className="space-y-2 text-gray-300">
-                            <li>123 Child Welfare Street</li>
-                            <li>Mumbai, Maharashtra 400001</li>
-                            <li>India</li>
-                            <li className="mt-4">Email: info@baalsanjeevani.org</li>
-                            <li>Phone: +91 22 1234 5678</li>
+                        <h4 className="text-lg font-semibold mb-6 text-white">Contact Info</h4>
+                        <ul className="space-y-4 text-gray-400">
+                            <li className="flex items-start">
+                                <span className="text-blue-500 mr-3 mt-1">📍</span>
+                                <span>123 Child Welfare Street,<br />Mumbai, Maharashtra 400001</span>
+                            </li>
+                            <li className="flex items-center">
+                                <span className="text-blue-500 mr-3">✉️</span>
+                                <span>info@baalsanjeevani.org</span>
+                            </li>
+                            <li className="flex items-center">
+                                <span className="text-blue-500 mr-3">📞</span>
+                                <span>+91 22 1234 5678</span>
+                            </li>
                         </ul>
+                    </div>
+
+                    <div>
+                        <h4 className="text-lg font-semibold mb-6 text-white">Newsletter</h4>
+                        <p className="text-gray-400 mb-4">Subscribe to get updates on our latest programs and success stories.</p>
+                        <form className="space-y-3">
+                            <input
+                                type="email"
+                                placeholder="Your email address"
+                                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-blue-500 text-gray-300"
+                            />
+                            <button className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition shadow-lg">
+                                Subscribe
+                            </button>
+                        </form>
                     </div>
                 </div>
 
-                <div className="border-t border-gray-700 pt-8 text-center">
-                    <p className="text-gray-300 flex items-center justify-center">
-                        © 2024 Baal Sanjeevani Child Welfare. Made with <FaHeart className="text-red-500 mx-2" /> for children.
+                <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                    <p className="text-gray-500 text-sm mb-4 md:mb-0">
+                        © 2024 Baal Sanjeevani Child Welfare. All rights reserved.
+                    </p>
+                    <p className="text-gray-500 text-sm flex items-center">
+                        Made with <FaHeart className="text-red-500 mx-2 animate-pulse" /> for a better future.
                     </p>
                 </div>
             </div>
