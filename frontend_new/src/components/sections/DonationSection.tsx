@@ -14,7 +14,7 @@ const DonationSection = () => {
 
     return (
         <section id="donate" className="relative py-20 bg-white">
-            <div className="absolute inset-0 z-0 opacity-5">
+            <div className="absolute inset-0 z-0 opacity-25">
                 <img
                     src="https://images.unsplash.com/photo-1532629345422-7515f3d16bb6?q=80&w=2000&auto=format&fit=crop"
                     alt="Donation Background"
